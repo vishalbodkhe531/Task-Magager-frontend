@@ -81,7 +81,7 @@ function Cart({ cartId, cartTitle, cartDesc, isPin }) {
 
   const handleModelSubmite = async (e) => {
     e.preventDefault();
-    const data = await fetch(`${API}api/task/update-task/${cartId}`, {
+    const data = await fetch(`${API}/api/task/update-task/${cartId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "Application/json",
@@ -89,6 +89,10 @@ function Cart({ cartId, cartTitle, cartDesc, isPin }) {
       credentials: "include",
       body: JSON.stringify({ title: formTitle, descriptione: formDesc }),
     });
+
+    const result = await data.json();
+
+    console.log(result);
   };
 
   return (
