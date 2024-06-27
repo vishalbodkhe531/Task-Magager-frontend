@@ -79,8 +79,8 @@ function RecycleBin({ cartId, cartTitle, cartDesc, isPin }) {
                   src={checkPng}
                   h={"22px"}
                   pos={"absolute"}
-                  left={["6", "11rem"]}
-                  top={["1", "3"]}
+                  left={["6", "10.30rem"]}
+                  top={["1", "0.80rem"]}
                   cursor={"pointer"}
                   onClick={handleCheckBtn}
                 />

@@ -41,8 +41,8 @@ function Profile() {
   };
 
   const handleLogoutBtn = async () => {
-    const data = await fetch(`${API}/api/user/logout`,{
-      method : "GET",
+    const data = await fetch(`${API}/api/user/logout`, {
+      method: "GET",
       credentials: "include",
     });
 

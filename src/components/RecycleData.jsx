@@ -11,7 +11,10 @@ function RecycleData() {
   const [allTaskData, setAllTaskData] = useState([]);
 
   useEffect(() => {
-    const data = fetch(`${API}/api/task/allTasks`)
+    const data = fetch(`${API}/api/task/allTasks`, {
+      method: "GET",
+      credentials: "include",
+    })
       .then((res) => res.json())
       .then((res) => setAllTaskData(res));
   }, [allTaskData]);

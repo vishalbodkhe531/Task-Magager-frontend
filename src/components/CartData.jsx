@@ -3,12 +3,16 @@ import React, { useEffect, useState } from "react";
 import Cart from "../pages/Cart";
 import { useDispatch } from "react-redux";
 import RecycleBin from "../pages/RecycleBin";
+import { API } from "../main";
 
 function CartData() {
   const [allTaskData, setAllTaskData] = useState([]);
 
   useEffect(() => {
-    const data = fetch(`${API}/api/task/allTasks`)
+    const data = fetch(`${API}/api/task/allTasks`, {
+      method: "GET",
+      credentials: "include",
+    })
       .then((res) => res.json())
       .then((res) => setAllTaskData(res));
   }, [allTaskData]);

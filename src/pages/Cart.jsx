@@ -47,16 +47,16 @@ function Cart({ cartId, cartTitle, cartDesc, isPin }) {
   // HandleBTN's
 
   const handleDeleteBtn = async () => {
-    const data = await fetch(`${API}/api/task/recycle-bin-check/${cartId}`,{
-      method : 'GET',
+    const data = await fetch(`${API}/api/task/recycle-bin-check/${cartId}`, {
+      method: "GET",
       credentials: "include",
     });
   };
 
   const handlePINBtn = async () => {
     setIsActivePin(true);
-    const data = await fetch(`${API}api/task/pin-task/${cartId}`,{
-      method : 'GET',
+    const data = await fetch(`${API}/api/task/pin-task/${cartId}`, {
+      method: "GET",
       credentials: "include",
     });
   };
@@ -128,8 +128,8 @@ function Cart({ cartId, cartTitle, cartDesc, isPin }) {
                     src={checkPng}
                     h={"22px"}
                     pos={"absolute"}
-                    left={["5", "11rem"]}
-                    top={["-1", "2"]}
+                    left={["5", "10rem"]}
+                    top={["1", "0.80rem"]}
                     cursor={"pointer"}
                     onClick={handleCheckBtn}
                   />
