@@ -22,10 +22,8 @@ const userSlice = createSlice({
     },
     signInSuccess: (state, action) => {
       state.loading = false;
-      state.currentUser = localStorage.setItem(
-        "currentUser",
-        JSON.stringify(action.payload)
-      );
+      state.currentUser = action.payload;
+      localStorage.setItem("currentUser", JSON.stringify(action.payload));
     },
     selectedCardArr: (state, action) => {
       state.selectedCardArr.push(action.payload);
